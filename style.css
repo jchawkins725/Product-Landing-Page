@@ -1,49 +1,53 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    font-weight: 400;
-  }
-  #nav-bar {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+.nav-bar {
     background-color: #212121;
     width: 100%;
     height: 70px;
-    line-height: 70px;
     position: fixed;
-    z-index: 1;
     top: 0;
+    z-index: 1;
   }
-  #header-img {
-    height: 70px;
-    float: left;
-    margin-left: 10px;
-  }
-  #nav-bar ul {
-    list-style-type: none;
+  #nav-list {
+    list-style: none;
+    float: right;
     margin: 0;
     padding: 0;
-    float: right
+    line-height: 70px;
+  }  
+  #header-img {
+    height: 70px;
+    position: absolute;
+    margin-left: 10px;
   }
-  #nav-bar li {
+  .nav-item {
     float: left;
   }
-  #nav-bar a {
+  .nav-link {
     display: block;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 0px 20px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
-  #nav-bar a:hover {
+  .nav-link:hover {
     background-color: #111121;
   }
+  #navicon {
+    display: none;
+  }  
   
   #main {
     margin-top: 70px;
     background-color: #F6F5F1;
     position: relative;
     padding-top: 0px;
+    text-align: center;
   }
   .sectionpadding {
     padding-top: 70px;
@@ -111,7 +115,7 @@
     padding-bottom: 50px;
   }
   .guitardescriptions { 
-    width: 30%;
+    width: 250px;
     padding-bottom: 40px;
   }
   .guitarpics {
@@ -124,8 +128,9 @@
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+    text-align: center;
     }
-  input[type=submit] {
+  #submit {
     width: 25%;
     min-width: 120px;
     padding: 12px;
@@ -136,7 +141,7 @@
     background-color: green;
     font-size: 16px;
     }
-  input[type=submit]:hover {
+  #submit:hover {
     background-color: #45a049;
   }
   @media only screen and (max-width:800px) {
@@ -144,28 +149,46 @@
       width: 45%;
     }
   }  
-  @media only screen and (max-width:450px) {
-    #header-img {
+  @media only screen and (max-width:600px) {
+    .nav-link {
       display: none;
     }
-    #nav-bar {
-      height: 210px;
-      position:static;
+    #navicon {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0px 30px;
+      color: white;
     }
-    #nav-bar ul {
-      float: left;
-      width: 100%;
-    }
-    #nav-bar li {
+    .nav-bar.responsive #nav-list {
       float: none;
-      
+      position: relative;
+      padding-top: 70px;
     }
+  
+    .nav-bar.responsive .nav-item {
+      text-align: center;
+      float: none;
+      padding: 0;
+    }
+  
+    .nav-bar.responsive .nav-link {
+      background-color: #212121;
+      display: block;
+    }
+  
+    .nav-bar.responsive .nav-link:hover {
+      background-color: #333333;
+    }
+  
+  
     #main {
       margin: 0;
     }
     #video {
-      width:auto;
-      height:auto;
+      width:80%;
+      height:45vw;
     }
     #guitardescriptions {
       width: 90%;
