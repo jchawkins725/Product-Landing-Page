@@ -144,11 +144,6 @@
   #submit:hover {
     background-color: #45a049;
   }
-  @media only screen and (max-width:800px) {
-    #guitardescriptions {
-      width: 45%;
-    }
-  }  
   @media only screen and (max-width:600px) {
     .nav-link {
       display: none;
@@ -180,11 +175,6 @@
   
     .nav-bar.responsive .nav-link:hover {
       background-color: #333333;
-    }
-  
-  
-    #main {
-      margin: 0;
     }
     #video {
       width:80%;
